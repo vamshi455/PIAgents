@@ -9,7 +9,7 @@ bundle:
 variables:
   pi_api_base:
     description: Base URL for mock PI API reachable from cluster
-    default: http://host.docker.internal:8080
+    default: https://negligent-subsiding-habitat.ngrok-free.dev
   existing_cluster_id:
     description: Classic all-purpose cluster id (never serverless)
     # Single-node classic: vsingam@mhktechinc.com's Cluster 2026-08-11 06:19:00

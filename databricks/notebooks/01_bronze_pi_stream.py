@@ -19,7 +19,7 @@ from pyspark.sql.types import (
     TimestampType,
 )
 
-PI_API_BASE = os.environ.get("PI_API_BASE", "http://host.docker.internal:8080")
+PI_API_BASE = os.environ.get("PI_API_BASE", "https://negligent-subsiding-habitat.ngrok-free.dev")
 CHECKPOINT = os.environ.get(
     "PI_BRONZE_CHECKPOINT",
     "/Volumes/industrial_ops/bronze/landing/checkpoints/pi_timeseries",
@@ -43,7 +43,12 @@ schema = StructType(
 # COMMAND ----------
 
 def fetch_snapshot(base_url: str) -> list[dict]:
-    with urllib.request.urlopen(f"{base_url.rstrip('/')}/snapshot/points", timeout=30) as resp:
+    # ngrok free tier serves an interstitial unless this header is set
+    req = urllib.request.Request(
+        f"{base_url.rstrip('/')}/snapshot/points",
+        headers={"ngrok-skip-browser-warning": "true"},
+    )
+    with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 

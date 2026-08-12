@@ -43,5 +43,6 @@ targets:
     mode: development
     default: true
     workspace:
-      # Placeholder — do not deploy until replaced with your workspace URL
-      host: https://YOUR-WORKSPACE.cloud.databricks.com
+      # Azure Databricks workspace (managed RG: databricks-rg-vamshi-dev-npujx7didcsju)
+      # Do not bundle-deploy until existing_cluster_id is set to your classic cluster.
+      host: https://adb-7405605697371162.2.azuredatabricks.net

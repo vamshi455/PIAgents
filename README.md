@@ -16,15 +16,15 @@ Mock AVEVA PI–style continuous time series API, Databricks medallion lakehouse
 cd api
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn app.main:app --host 127.0.0.1 --port 8080
+uvicorn app.main:app --host 127.0.0.1 --port 8081
 ```
 
-- Health: `GET http://localhost:8080/health`
-- Tags: `GET http://localhost:8080/tags`
-- SSE stream: `GET http://localhost:8080/stream/points`
-- Snapshot (for Databricks poll): `GET http://localhost:8080/snapshot/points`
+- Health: `GET http://localhost:8081/health`
+- Tags: `GET http://localhost:8081/tags`
+- SSE stream: `GET http://localhost:8081/stream/points`
+- Snapshot (for Databricks poll): `GET http://localhost:8081/snapshot/points`
 
-For Azure Databricks to reach this Mac, keep a tunnel up (e.g. `ngrok http 127.0.0.1:8080`) and set `PI_API_BASE` to the https URL. The bronze notebook sends `ngrok-skip-browser-warning` for free-tier tunnels.
+For Azure Databricks to reach this Mac, keep a tunnel up (e.g. `ngrok http 127.0.0.1:8081`) and set `PI_API_BASE` to the https URL. The bronze notebook sends `ngrok-skip-browser-warning` for free-tier tunnels.
 
 ## Databricks setup order
 

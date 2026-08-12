@@ -8,4 +8,4 @@ if [[ ! -d .venv ]]; then
 else
   source .venv/bin/activate
 fi
-exec uvicorn app.main:app --host 0.0.0.0 --port "${PORT:-8080}"
+exec uvicorn app.main:app --host 0.0.0.0 --port "${PORT:-8081}"

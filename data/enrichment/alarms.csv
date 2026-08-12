@@ -1,0 +1,6 @@
+alarm_id,asset_id,plant_id,raised_at,cleared_at,severity,alarm_code,alarm_text,acked_at,acked_by_employee_id,acked_by_name
+ALM-9001,PMP-12,PLANT-01,2026-08-10T05:55:00Z,2026-08-10T07:10:00Z,HIGH,VIB_HI,Vibration above HI limit,2026-08-10T06:05:00Z,E10055,Alex Chen
+ALM-9002,PMP-12,PLANT-01,2026-08-11T22:10:00Z,,HIGH,TEMP_HI,Bearing temperature above HI,2026-08-11T22:15:00Z,E10021,Jordan Lee
+ALM-9003,CMP-03,PLANT-01,2026-08-09T14:00:00Z,2026-08-09T14:20:00Z,MEDIUM,SUCT_LO,Suction pressure low,2026-08-09T14:05:00Z,E10034,Sam Rivera
+ALM-9004,PMP-14,PLANT-01,2026-08-08T03:00:00Z,2026-08-08T03:05:00Z,LOW,AMP_SPIKE,Brief motor amp spike,2026-08-08T03:02:00Z,E10021,Jordan Lee
+ALM-9005,CMP-03,PLANT-01,2026-08-12T01:30:00Z,,HIGH,VIB_HI,Compressor vibration HI,2026-08-12T01:35:00Z,E10055,Alex Chen

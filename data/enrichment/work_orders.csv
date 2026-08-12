@@ -1,0 +1,6 @@
+work_order_id,asset_id,plant_id,opened_at,closed_at,status,failure_code,priority,technician_employee_id,technician_name,technician_email,technician_badge_id,parts_used,labor_hours,notes
+WO-1001,PMP-12,PLANT-01,2026-06-01T08:00:00Z,2026-06-01T14:30:00Z,CLOSED,BRG-WEAR,2,E10021,Jordan Lee,jordan.lee@example.com,BDG-4412,bearing-kit-A,6.5,Replaced DE bearing; vibration reduced
+WO-1002,CMP-03,PLANT-01,2026-06-15T10:00:00Z,2026-06-16T02:00:00Z,CLOSED,SEAL-LEAK,1,E10034,Sam Rivera,sam.rivera@example.com,BDG-5521,seal-set-C,12.0,Emergency seal replacement
+WO-1003,PMP-14,PLANT-01,2026-07-02T09:00:00Z,2026-07-02T11:00:00Z,CLOSED,ALIGN,3,E10021,Jordan Lee,jordan.lee@example.com,BDG-4412,shim-pack,2.0,Laser alignment
+WO-1004,PMP-12,PLANT-01,2026-08-10T06:30:00Z,,OPEN,VIB-HIGH,1,E10055,Alex Chen,alex.chen@example.com,BDG-6670,,0.0,Investigating rising vibration trend
+WO-1005,CMP-03,PLANT-01,2026-08-11T13:00:00Z,,OPEN,PM-INSPECT,3,E10034,Sam Rivera,sam.rivera@example.com,BDG-5521,,0.0,Scheduled quarterly inspection

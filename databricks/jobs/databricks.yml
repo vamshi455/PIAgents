@@ -1,0 +1,47 @@
+# Databricks Asset Bundle — PI lakehouse jobs
+# COMPUTE POLICY: use an existing classic cluster only.
+# Do NOT use serverless compute, job clusters, or environment_key serverless specs.
+# Fill existing_cluster_id + workspace host before any deploy (deploy is not done by default).
+
+bundle:
+  name: pi-databricks-lakehouse
+
+variables:
+  pi_api_base:
+    description: Base URL for mock PI API reachable from cluster
+    default: http://host.docker.internal:8080
+  existing_cluster_id:
+    description: Classic all-purpose cluster id (never serverless)
+    default: REPLACE_WITH_CLASSIC_CLUSTER_ID
+
+resources:
+  jobs:
+    pi_bronze_stream:
+      name: pi-bronze-timeseries-stream
+      tasks:
+        - task_key: bronze_pi_stream
+          existing_cluster_id: ${var.existing_cluster_id}
+          notebook_task:
+            notebook_path: ../notebooks/01_bronze_pi_stream.py
+
+    enrichment_and_curate:
+      name: pi-enrichment-silver-gold
+      tasks:
+        - task_key: bronze_enrichment
+          existing_cluster_id: ${var.existing_cluster_id}
+          notebook_task:
+            notebook_path: ../notebooks/02_bronze_enrichment_batch.py
+        - task_key: silver_gold
+          depends_on:
+            - task_key: bronze_enrichment
+          existing_cluster_id: ${var.existing_cluster_id}
+          notebook_task:
+            notebook_path: ../notebooks/03_silver_gold_transforms.py
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      # Placeholder — do not deploy until replaced with your workspace URL
+      host: https://YOUR-WORKSPACE.cloud.databricks.com

@@ -1,0 +1,1 @@
+"""Mock AVEVA PI–compatible time series streaming API."""

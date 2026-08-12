@@ -1,0 +1,4 @@
+plant_id,area_id,unit_id,asset_id,asset_name,asset_type,criticality,manufacturer,install_date,parent_asset_id
+PLANT-01,AREA-COMPRESS,UNIT-FEED,PMP-12,Feed Pump 12,pump,A,Flowserve,2018-03-15,
+PLANT-01,AREA-COMPRESS,UNIT-FEED,PMP-14,Feed Pump 14,pump,B,Flowserve,2019-07-01,
+PLANT-01,AREA-COMPRESS,UNIT-GAS,CMP-03,Process Compressor 03,compressor,A,Siemens,2016-11-20,

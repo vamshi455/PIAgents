@@ -6,8 +6,8 @@ Mock AVEVA PI–style continuous time series API, Databricks medallion lakehouse
 
 - **Repo + local mock API alone incur $0 Databricks cost.**
 - Do **not** deploy jobs or run SQL/notebooks until you intentionally attach your **existing small classic cluster**.
-- **Serverless is forbidden** for this project. Jobs are pinned to `existing_cluster_id` in `databricks/jobs/databricks.yml` (placeholder until you provide the id).
-- Workspace host is set to `https://adb-7405605697371162.2.azuredatabricks.net` (Azure RG `databricks-rg-vamshi-dev-npujx7didcsju`). **No deploy/SQL/jobs have been run.**
+- **Serverless is forbidden** for this project. Jobs are pinned to classic cluster `0811-112417-qhhyebl0` (`vsingam@mhktechinc.com's Cluster 2026-08-11 06:19:00`) via `databricks/jobs/databricks.yml`.
+- Workspace host is set to `https://adb-7405605697371162.2.azuredatabricks.net` (Azure RG `databricks-rg-vamshi-dev-npujx7didcsju`). **No deploy/SQL/jobs have been run from this repo.**
 - Creating UC objects or running notebooks later will use that classic cluster while it is awake — only do that when you ask.
 
 ## Quick start (API)

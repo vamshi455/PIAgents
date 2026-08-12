@@ -12,7 +12,8 @@ variables:
     default: http://host.docker.internal:8080
   existing_cluster_id:
     description: Classic all-purpose cluster id (never serverless)
-    default: REPLACE_WITH_CLASSIC_CLUSTER_ID
+    # Single-node classic: vsingam@mhktechinc.com's Cluster 2026-08-11 06:19:00
+    default: 0811-112417-qhhyebl0
 
 resources:
   jobs:
@@ -44,5 +45,5 @@ targets:
     default: true
     workspace:
       # Azure Databricks workspace (managed RG: databricks-rg-vamshi-dev-npujx7didcsju)
-      # Do not bundle-deploy until existing_cluster_id is set to your classic cluster.
+      # Classic cluster pinned via var.existing_cluster_id. Do not bundle-deploy until you ask.
       host: https://adb-7405605697371162.2.azuredatabricks.net

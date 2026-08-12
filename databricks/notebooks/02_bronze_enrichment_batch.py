@@ -12,7 +12,7 @@ from pyspark.sql import functions as F
 
 LANDING = os.environ.get(
     "ENRICHMENT_LANDING",
-    "/Volumes/industrial_ops/bronze/landing/enrichment",
+    "/Volumes/industrial_ops/bronze/landing",
 )
 INGEST_TS = datetime.now(timezone.utc)
 

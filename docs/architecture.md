@@ -1,5 +1,7 @@
 # Architecture
 
+Concise reference. For operations-grade detail, diagrams, and runbooks see [operations/00_handbook.md](operations/00_handbook.md) and the [docs index](README.md).
+
 ## Data flow
 
 1. **Mock PI API** (`api/`) emits continuous `TimeSeriesPoint` batches (SSE + snapshot).
